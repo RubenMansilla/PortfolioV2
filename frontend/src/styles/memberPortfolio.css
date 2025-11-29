@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+:root {
+    --Black: #121212;
+    --White: #d4d0c9;
+    --Turquese: #25beae;
+    --Blue: #2735a9;
+    --Gray: #262626;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    /* Ancho de la barra de desplazamiento */
+    height: 10px;
+    /* Alto de la barra de desplazamiento (para scroll horizontal) */
+}
+
+/* Estilo del fondo de la barra */
+::-webkit-scrollbar-track {
+    background-color: #121212;
+    /* Color de fondo de la barra */
+}
+
+/* Estilo del "pulgar" o la parte móvil de la barra */
+::-webkit-scrollbar-thumb {
+    background-color: #5cbbae;
+    /* Color del pulgar (parte móvil) */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    border: 2px solid #121212;
+    /* Borde sutil para darle un toque */
+}
+
+/* Estilo cuando el pulgar está siendo presionado (hover) */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ffffff;
+    /* Color más claro cuando el pulgar está activo */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h3,
+h2 {
+    font-family: "Aldrich", sans-serif;
+}
+
+.member {
+    font-family: "Proza Libre", sans-serif;
+    width: 100%;
+    padding-bottom: 100px;
+    background-color: var(--Black);
+    color: white;
+    text-align: justify;
+    line-height: 1.5;
+    background: linear-gradient(to bottom,
+            #000000 0%,
+            #121212 50%,
+            #121212 100%);
+    background-color: #080808;
+    background-color: #080808;
+    opacity: 1;
+    background-size: 17px 17px;
+    background-image: repeating-linear-gradient(45deg,
+            #0c0c0c 0,
+            #0c0c0c 1.7000000000000002px,
+            #080808 0,
+            #080808 50%);
+}
+
+.aboutMeCont,
+.teamProjectsSection,
+.tecnologiesSection,
+.studiesSection,
+.idiomSection {
+    margin-bottom: 150px;
+}
+
+/*----------------HERO--------------------*/
+.hero {
+    width: 100%;
+    height: 65vh;
+    position: relative;
+    margin-bottom: 250px;
+    padding: 2%;
+    font-family: "Aldrich", sans-serif;
+    padding-top: 170px;
+}
+
+.hero_introduction {
+
+    font-size: 40px;
+    text-align: center;
+}
+
+.hero_titulation {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    width: 70%;
+    transform: translateX(-50%);
+    bottom: 0;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    color: var(--Turquese);
+    font-family: "Proza Libre", sans-serif;
+    text-align: center;
+}
+
+/*----------------SOBRE MÍ--------------------*/
+.aboutMeCont {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.aboutMeCont__img {
+    width: 30%;
+    height: 500px;
+    background-color: azure;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.aboutMeCont__img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.aboutMeCont__textCont {
+    width: 40%;
+    height: 100%;
+    border: 2px solid var(--Turquese);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.aboutMeCont__textCont h3 {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+.aboutMeCont__textCont p {
+    font-size: 20px;
+}
+
+/*----------------PROYECTOS--------------------*/
+.teamProjectsSection__title,
+.tecnologiesSection__title {
+    text-align: center;
+    font-size: 34px;
+    color: white;
+}
+
+.teamProjectsSection__subtitle {
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.teamProjectsSection hr,
+.tecnologiesSection hr {
+    width: 20%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 2px solid var(--Turquese);
+    border-radius: 5px;
+}
+
+.teamProjectsSection {
+    width: 100%;
+    min-height: 200px;
+    background-color: var(--lightYellow);
+}
+
+.projectListCont a {
+    text-decoration: none;
+    color: white;
+}
+
+.projectCard {
+    width: 70%;
+    margin: auto;
+    background-color: var(--blue);
+    padding: 50px;
+    margin-bottom: 100px;
+    background-color: var(--Gray);
+    border-radius: 15px;
+}
+
+.projectCardTitleCont h3 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.projectCard h4 {
+    color: var(--Turquese);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.projectCardTitleCont p {
+    color: white;
+    font-size: 20px;
+}
+
+.projectCardTitleCont hr {
+    width: 100%;
+    border: 1px solid var(--Turquese);
+}
+
+.projectCardTecnologyCont {
+    margin-top: 20px;
+}
+
+.projectTecnologyCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.tecnologiesSectionCard p {
+    margin-top: 8px;
+}
+
+.projectCard img {
+    height: 100px;
+}
+
+.projectTecnologyList {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    overflow: hidden;
+}
+
+.visitURL,
+.company {
+    font-size: 18px;
+    color: var(--Turquese);
+    margin-top: 15px;
+}
+
+.visitURL a,
+.company span {
+    color: white;
+    margin-left: 10px;
+}
+
+/*----------------TECNOLOGÍAS--------------------*/
+.tecnologiesSection {
+    width: 100%;
+    min-height: 200px;
+    padding: 0 10%;
+}
+
+.tecnologiesSectionList {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+}
+
+.tecnologiesSectionCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 20%;
+}
+
+.tecnologiesSectionCard img {
+    height: 110px;
+    object-fit: cover;
+}
+
+/*----------------ESTUDIOS e IDIOMAS--------------------*/
+.studiesSection,
+.idiomSection {
+    min-height: 100px;
+    padding: 0 10%;
+}
+
+.idiomSection_title,
+.studiesSection__title {
+    text-align: left;
+    font-size: 28px;
+}
+
+.studiesSection hr,
+.idiomSection hr {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--Turquese);
+    border-radius: 5px;
+}
+
+.idiomSection__list,
+.studiesSection p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    font-size: 22px;
+}

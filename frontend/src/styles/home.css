@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --Black: #121212;
+    --White: #d4d0c9;
+    --Turquese: #25beae;
+    --Blue: #2735a9;
+    --Gray: #262626;
+}
+
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Ancho de la barra de desplazamiento */
+    height: 10px;
+    /* Alto de la barra de desplazamiento (para scroll horizontal) */
+}
+
+/* Estilo del fondo de la barra */
+::-webkit-scrollbar-track {
+    background-color: #121212;
+    /* Color de fondo de la barra */
+}
+
+/* Estilo del "pulgar" o la parte móvil de la barra */
+::-webkit-scrollbar-thumb {
+    background-color: #5cbbae;
+    /* Color del pulgar (parte móvil) */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    border: 2px solid #121212;
+    /* Borde sutil para darle un toque */
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h3,
+h2 {
+    font-family: "Aldrich", sans-serif;
+}
+
+main {
+    font-family: "Proza Libre", sans-serif;
+    width: 100%;
+    background-color: var(--Black);
+    color: white;
+    text-align: justify;
+    line-height: 1.5;
+    padding-bottom: 100px;
+    background: linear-gradient(to bottom, #000000 0%, #121212 50%, #121212 100%);
+}
+
+.hero_main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Orbitron", sans-serif;
+}
+
+.hero_main {
+    position: relative;
+    overflow: hidden;
+    /* Necesario para que el glow no se descontrole */
+}
+
+
+/* Texto con efecto neón */
+.hero_group {
+    font-size: 60px;
+    /* Tamaño moderado para el texto */
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    background: linear-gradient(90deg, #5cbbae, #ffffff, #5cbbae);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px #5cbbae, 0 0 30px #5cbbae, 0 0 50px #5cbbae;
+    animation: glowEffect 2s infinite alternate, textMove 8s linear infinite;
+}
+
+
+.aboutUs {
+    margin: 100px 0;
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.aboutUs_textCont {
+    width: 45%;
+    height: auto;
+    padding: 4%;
+    text-wrap: balance;
+    font-size: 15px;
+    border: 2px solid var(--Turquese);
+    border-radius: 15px;
+}
+
+.aboutUs_textCont h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+.aboutUs_textCont p {
+    font-size: 20px;
+}
+
+.aboutUs img {
+    width: 45%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.teamSection {
+    width: 100%;
+    min-height: 300px;
+    margin-bottom: 150px;
+}
+
+.teamSection_title,
+.teamProjectsSection__title {
+    text-align: center;
+    font-size: 34px;
+    color: white;
+}
+
+.teamSection__subtitle,
+.teamProjectsSection__subtitle {
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.teamSection hr,
+.teamProjectsSection hr {
+    width: 20%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 2px solid var(--Turquese);
+    border-radius: 5px;
+}
+
+.memberListCont {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+
+.memberCardLink {
+    width: 40%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.memberCard {
+    width: 100%;
+    height: 200px;
+    background-color: var(--Gray);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+}
+
+.memberCard__photoCont {
+    width: 30%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.memberCard__photoCont img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.memberCard__infoCont {
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+.memberCard__infoCont h3 {
+    font-size: 26px;
+}
+
+.memberCard__infoCont--title {
+    color: var(--Turquese);
+    margin: 10px 0 20px 0;
+    font-size: 16px;
+}
+
+.memberCard__infoCont--presentation {
+    white-space: nowrap;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/*----------------------PROYECTOS----------------------*/
+.teamProjectsSection {
+    width: 100%;
+    min-height: 200px;
+    background-color: var(--lightYellow);
+}
+
+.projectListCont a {
+    text-decoration: none;
+    color: white;
+}
+
+.projectCard {
+    width: 70%;
+    margin: auto;
+    padding: 50px;
+    margin-bottom: 100px;
+    background-color: var(--Gray);
+    border-radius: 15px;
+}
+
+.projectCardTitleCont h3 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.projectCard h4 {
+    color: var(--Turquese);
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.projectCardTitleCont p {
+    color: white;
+    font-size: 20px;
+}
+
+.projectCardTitleCont hr {
+    width: 100%;
+    border: 1px solid var(--Turquese);
+}
+
+.projectCardTecnologyCont {
+    margin-top: 20px;
+}
+
+.projectTecnologyCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.projectCard img {
+    height: 70px;
+}
+
+.projectCardMembersCont {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.projectMemberList,
+.projectTecnologyList {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    overflow: hidden;
+}
+
+.projectMemberCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.projectMemberCard img {
+    height: 100px;
+    width: 100px;
+    border-radius: 80%;
+    object-fit: cover;
+}
+
+.projectMemberCard p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.visitURL,
+.company {
+    font-size: 18px;
+    color: var(--Turquese);
+    margin-top: 15px;
+}
+
+.visitURL a,
+.company span {
+    color: white;
+    margin-left: 10px;
+}
+
+.footer {
+    padding: 2% 4%;
+    color: white;
+    background-color: var(--Gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #262626;
+    opacity: 1;
+    background: linear-gradient(135deg, #12121255 25%, transparent 25%) -13px 0/ 26px 26px,
+        linear-gradient(225deg, #121212 25%, transparent 25%) -13px 0/ 26px 26px,
+        linear-gradient(315deg, #12121255 25%, transparent 25%) 0px 0/ 26px 26px,
+        linear-gradient(45deg, #121212 25%, #262626 25%) 0px 0/ 26px 26px;
+}
+
+.footer h2 {
+    font-size: 30px;
+}
+
+.footer h4 {
+    font-size: 22px;
+    color: var(--Turquese);
+    margin-bottom: 20px;
+}
+
+.footerLogoCont {
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerLogoCont img {
+    height: 60px;
+    width: 60px;
+}
+
+.mediaCont {
+    height: 100%;
+    width: 10%;
+}
+
+.mediaIconsCont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mediaIconsCont svg {
+    height: 50px;
+    width: 50px;
+}
