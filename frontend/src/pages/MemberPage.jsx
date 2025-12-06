@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { api } from "../api";
 import "../styles/memberPortfolio.css";
+import { TECH_IMG } from '../constants/techImages';
 
 export default function MemberPage() {
     const { id } = useParams();
@@ -9,41 +10,8 @@ export default function MemberPage() {
     const [projects, setProjects] = useState([]);
     const [error, setError] = useState(null);
 
-    const TECH_IMG = {
-        "JavaScript": "/img/javascript.png",
-        "Node.js": "/img/node.png",
-        "Kotlin": "/img/kotlin.png",
-        "HTML": "/img/html.png",
-        "CSS": "/img/css.png",
-        "PHP": "/img/php.png",
-        "MySQL": "/img/mysql.png",
-        "Java": "/img/java.png",
-        "Bootstrap": "/img/Bootstrap.png",
-        "Firebase": "/img/Firebase.png",
-        "Unity": "/img/unity.png",
-        "Godot": "/img/godot.png",
-        "Svelte": "/img/Svelte.png",
-        "React": "/img/React.png",
-        "Spring": "/img/Spring.png",
-        "OpenWeather": "/img/openWeather.png",
-        "Vue": "/img/vue.png",
-        "Figma": "/img/figma.png",
-        "Docker": "/img/docker.png",
-        "Lanustats": "/img/lanusStats.png",
-        "Python": "/img/python.png",
-        "NestJS": "/img/nestjs.png",
-        "PostgreSQL": "/img/postgresql.png",
-        "Angular": "/img/angular.png",
-        "TypeScript": "/img/typescript.png",
-        "Android Studio": "/img/androidStudio.png",
-        "Supabase": "/img/supabase.png",
-        "Tailwind": "/img/tailwind.png",
-        "Open-Meteo": "/img/openMeteo.png",
-        "SQL": "/img/sql.png",
-    };
-
     const getTechImage = (name = "") => {
-        // Normaliza el nombre (quita espacios y pasa a minúsculas)
+        // Normaliza el nombre (quitar espacios y pasa a minúsculas)
         const cleanName = name.trim().toLowerCase();
 
         // Busca coincidencia ignorando mayúsculas
@@ -84,7 +52,7 @@ export default function MemberPage() {
                 setMember(data);
                 setProjects(proy);
             } catch (err) {
-                console.error("❌ Error al obtener el miembro:", err);
+                console.error(" Error al obtener el miembro:", err);
                 setError("No se pudo cargar el miembro.");
             }
         }

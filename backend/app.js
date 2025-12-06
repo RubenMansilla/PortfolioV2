@@ -1,23 +1,4 @@
-const express = require("express");
-const cors = require("cors");
-const sequelize = require("./db");
-const Member = require("./models/Member");
-const Project = require("./models/Project");
-
-const app = express();
-app.use(cors());
-app.use(express.json());
-app.use(express.static("public"));
-
-sequelize.authenticate()
-  .then(() => console.log("✅ Conexión a la base de datos establecida"))
-  .catch(err => console.error("❌ Error al conectar:", err));
-
-sequelize.sync({ force: false })
-  .then(() => console.log("📦 Tablas sincronizadas"))
-  .catch(err => console.error("❌ Error al sincronizar:", err));
-
-// 🔧 Diccionario de imágenes (igual que en Handlebars)
+// Diccionario de imágenes 
 const techImages = {
   JavaScript: "/img/Javascript.webp",
   "Node.js": "/img/node.png",
@@ -37,6 +18,26 @@ const techImages = {
   Spring: "/img/Spring.png",
 };
 
+const express = require("express");
+const cors = require("cors");
+const sequelize = require("./db");
+const Member = require("./models/Member");
+const Project = require("./models/Project");
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.use(express.static("public"));
+
+sequelize.authenticate()
+  .then(() => console.log("Conexión a la base de datos establecida"))
+  .catch(err => console.error(" Error al conectar:", err));
+
+sequelize.sync({ force: false })
+  .then(() => console.log(" Tablas sincronizadas"))
+  .catch(err => console.error(" Error al sincronizar:", err));
+
+
 // ========= Miembros =========
 app.get("/api/members", async (req, res) => {
   try {
@@ -48,7 +49,7 @@ app.get("/api/members", async (req, res) => {
   }
 });
 
-// ========= Proyectos de GRUPO (como en Home) =========
+// ========= Proyectos de GRUPO =========
 app.get("/api/projects", async (req, res) => {
   try {
     const projects = await Project.findAll({
@@ -118,4 +119,4 @@ app.get("/api/member/:id", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🚀 Servidor API en http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Servidor API en http://localhost:${PORT}`));

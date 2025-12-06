@@ -68,14 +68,12 @@ main {
 .hero_main {
     position: relative;
     overflow: hidden;
-    /* Necesario para que el glow no se descontrole */
 }
 
 
 /* Texto con efecto neón */
 .hero_group {
     font-size: 60px;
-    /* Tamaño moderado para el texto */
     text-align: center;
     color: #ffffff;
     position: relative;

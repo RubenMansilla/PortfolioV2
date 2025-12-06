@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { api } from "../api";
 import "../styles/home.css";
+import { TECH_IMG } from '../constants/techImages';
 
 export default function HomePage() {
     const [members, setMembers] = useState([]);
@@ -10,39 +11,6 @@ export default function HomePage() {
         api.get("/members").then(res => setMembers(res.data));
         api.get("/projects").then(res => setProjects(res.data));
     }, []);
-
-    const TECH_IMG = {
-        "JavaScript": "/img/javascript.png",
-        "Node.js": "/img/node.png",
-        "Kotlin": "/img/kotlin.png",
-        "HTML": "/img/html.png",
-        "CSS": "/img/css.png",
-        "PHP": "/img/php.png",
-        "MySQL": "/img/mysql.png",
-        "Java": "/img/java.png",
-        "Bootstrap": "/img/Bootstrap.png",
-        "Firebase": "/img/Firebase.png",
-        "Unity": "/img/unity.png",
-        "Godot": "/img/godot.png",
-        "Svelte": "/img/Svelte.png",
-        "React": "/img/React.png",
-        "Spring": "/img/Spring.png",
-        "OpenWeather": "/img/openWeather.png",
-        "Vue": "/img/vue.png",
-        "Figma": "/img/figma.png",
-        "Docker": "/img/docker.png",
-        "Lanustats": "/img/lanusStats.png",
-        "Python": "/img/python.png",
-        "NestJS": "/img/nestjs.png",
-        "PostgreSQL": "/img/postgresql.png",
-        "Angular": "/img/angular.png",
-        "TypeScript": "/img/typescript.png",
-        "Android Studio": "/img/androidStudio.png",
-        "Supabase": "/img/supabase.png",
-        "Tailwind": "/img/tailwind.png",
-        "Open-Meteo": "/img/openMeteo.png",
-        "SQL": "/img/sql.png",
-    };
 
     const getTechImage = (name = "") => {
         // Normaliza el nombre (quita espacios y pasa a minúsculas)
